@@ -1,18 +1,12 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import AwesomeModuleExample from 'react-native-awesome-module-example';
+import { StyleSheet, View } from 'react-native';
+import { RedContainer } from 'react-native-awesome-module-example';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    AwesomeModuleExample.multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <RedContainer />
     </View>
   );
 }
@@ -22,6 +16,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'blue',
   },
   box: {
     width: 60,
